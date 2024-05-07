@@ -1,5 +1,11 @@
 -- version 0.2.3
 
+if vim.g.loaded_dashboard then
+  return
+end
+
+vim.g.loaded_dashboard = 1
+
 local g = vim.api.nvim_create_augroup('dashboard', { clear = true })
 
 vim.api.nvim_create_autocmd('StdinReadPre', {
